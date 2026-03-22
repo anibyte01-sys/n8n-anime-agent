@@ -1,0 +1,14 @@
+services:
+  - name: n8n
+    type: web
+    plan: starter
+    startCommand: n8n start --port=$PORT --host=0.0.0.0
+    env:
+      - name: WEBHOOK_URL
+        value: https://your-project.up.railway.app
+      - name: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - name: N8N_BASIC_AUTH_USER
+        value: admin
+      - name: N8N_BASIC_AUTH_PASSWORD
+        value: StrongPassword123
